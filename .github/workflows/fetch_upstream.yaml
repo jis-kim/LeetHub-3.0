@@ -15,7 +15,7 @@ jobs:
         run: |
           if ! git remote get-url upstream &>/dev/null; then
             echo "Adding upstream remote"
-            git remote add upstream https://github.com/jis-kim/ps-rolling.git
+            git remote add upstream https://github.com/raphaelheinz/LeetHub-3.0.git
           else
             echo "Upstream remote already exists"
           fi
