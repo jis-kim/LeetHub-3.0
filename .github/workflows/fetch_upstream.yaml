@@ -1,7 +1,7 @@
 name: Fetch Upstream
 on:
   schedule:
-    - cron: '0 0 * * 0'  # 매주 일요일 자정
+    - cron: '0 0 * * *'  # 매일 자정
   workflow_dispatch:
 
 jobs:
