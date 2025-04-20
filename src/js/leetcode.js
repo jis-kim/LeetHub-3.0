@@ -82,10 +82,11 @@ function getTime() {
  */
 
 function constructGitHubPath(hook, basePath, difficulty, problem, filename, useDifficultyFolder) {
+  const prefix = 'leetcode';
   const path = useDifficultyFolder
     ? `${basePath}/${difficulty}/${problem}/${filename}`
     : `${problem}/${filename}`;
-  return `https://api.github.com/repos/${hook}/contents/${path}`;
+  return `https://api.github.com/repos/${hook}/contents/${prefix}/${path}`;
 }
 
 const parseCustomCommitMessage = (text, problemContext) => {
