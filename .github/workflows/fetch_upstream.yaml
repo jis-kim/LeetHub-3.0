@@ -25,6 +25,9 @@ jobs:
       - name: Fetch upstream main
         run: git fetch --all
 
+      - name: git config
+        run: git config --list
+
       - name: Merge upstream changes
         run: |
           git merge upstream/main || echo "::warning:: 병합 충돌 발생"
