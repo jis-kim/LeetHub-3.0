@@ -30,7 +30,7 @@ jobs:
 
       - name: Merge upstream changes
         run: |
-          git merge upstream/main || echo "::warning:: 병합 충돌 발생"
+          git rebase upstream/main || echo "::warning:: 병합 충돌 발생" && exit 1
 
       - name: Push changes
         run: |
