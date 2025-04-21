@@ -33,13 +33,6 @@ jobs:
       - name: Merge upstream changes
         run: |
           git rebase upstream/main
-          if [ $? -eq 0 ]; then
-            echo "Rebase 성공"
-          else
-            echo "::warning:: 병합 충돌 발생"
-            exit 1
-          fi
-
       - name: Push changes
         run: |
-          git push origin main
+          git push origin main -f
